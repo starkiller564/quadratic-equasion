@@ -32,15 +32,21 @@ int discriminant(int a, int b, int c)
 
 void roots(int a, int b, int c, int d)
 {
+	double x1, x2;
+	x1 = (-b + sqrt(d)) / (2 * a);
+	x2 = (-b - sqrt(d)) / (2 * a);
+
 	if (d > 0)
 	{
-		cout << "x1 = " << double (-b + sqrt(d)) / (2 * a) << endl;
-		cout << "x2 = " << double (-b - sqrt(d)) / (2 * a) << endl;
+		cout << "x1 = " << x1 << endl;
+		cout << "x2 = " << x2 << endl;
 	}
+
 	if (d == 0)
 	{
-		cout << "x = " << double (-b / (2 * a)) << endl;
+		cout << "x = " << x1 << endl;
 	}
+	
 	if (d < 0)
 	{
 		cout << "No roots" << endl;
